@@ -55,25 +55,6 @@ namespace EDMX_PARSER.DES
             return (EDMX_PARSER.Serialize.SchemaEntityType1)result;
         }
 
-        /*public IEnumerable<SchemaEntityTypeNavigationProperty> GetRelatedEntity(string name)
-        {
-            var entity = GetEntity(name);
-            var result = entity.NavigationProperty;
-
-            return (IEnumerable<SchemaEntityTypeNavigationProperty>)result;
-        }
-
-        public SchemaAssociation GetRelatedEntityAssociation(string relationship)
-        {
-            string identifier = StripLastName(relationship);
-
-            var association = (from assoc in this.Associations
-                               where assoc.Name == identifier
-                               select assoc).First();
-
-            return association;
-        }*/
-
         public string StripLastName(string relationship)
         {
             string[] names = relationship.Split('.');
